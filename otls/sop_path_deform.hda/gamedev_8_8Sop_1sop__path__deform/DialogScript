@@ -11,7 +11,7 @@
 
     inputlabel	1	"Input Mesh"
     inputlabel	2	"Input Curve"
-    inputlabel	3	Start
+    inputlabel	3	"Banking Curve (determines up direction) "
     inputlabel	4	End
 
     groupsimple {
@@ -45,6 +45,26 @@
             type    float
             default { "1" }
             range   { 0 10 }
+        }
+        parm {
+            name    "clip_min"
+            label   "Clip Bottom End"
+            type    toggle
+            joinnext
+            default { "0" }
+        }
+        parm {
+            name    "clip_max"
+            label   "Clip Top End"
+            type    toggle
+            joinnext
+            default { "0" }
+        }
+        parm {
+            name    "collapse"
+            label   "Collapse Instead of Clip"
+            type    toggle
+            default { "1" }
         }
     }
 
